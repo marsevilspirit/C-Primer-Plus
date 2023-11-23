@@ -14,10 +14,10 @@ int main(void)
 {
     struct film * head = NULL;
     struct film * prev, *current;
-    char input[TSIZE];
+    char name[TSIZE];
 
     puts("Enter first movie title:");
-    while (s_gets(input, TSIZE) != NULL && input[0] != '\0')
+    while (s_gets(name, TSIZE) != NULL && name[0] != '\0')
     {
         current = (struct film *) malloc(sizeof(struct film));
         if(head == NULL)
@@ -25,7 +25,7 @@ int main(void)
         else
             prev->next = current;
         current->next = NULL;
-        strcpy(current->title, input);
+        strcpy(current->title, name);
         puts("Enter your rating <0-10>:");
         scanf("%d",&current->rating);
         while (getchar() != '\n')

@@ -81,7 +81,7 @@ int main(void)
                 printf("\n");
                 break;
             case 'L':
-                printf("\nOK,那就让我们进行特定位置插入吧！(输入-1退出)\n");
+                printf("\nOK,那就让我们进行特数值删除吧！(输入-1退出)\n");
                 int key;
                 printf("请输入你想删除的值：");
                 scanf("%d",&key);
@@ -98,8 +98,8 @@ int main(void)
                 }
                 break;
             case 'e':
-                printf("\nOK,那就让我们进行尾插吧：\n");
-                printf("你要进行尾插的次数：");
+                printf("\nOK,那就让我们进行尾删吧：\n");
+                printf("你要进行尾删的次数：");
                 int counte;
                 scanf("%d",&counte);
                 for(int i = 0;i < counte && head != NULL; i++)

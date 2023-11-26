@@ -47,6 +47,15 @@ void insertAtEnd(struct Node** head, int data)
 
 void insertAtPosition(struct Node** head, int data, int position)
 {
+    if(position == 1)
+    {
+        struct Node * newBegin = (struct Node *)malloc(sizeof(struct Node));
+
+        newBegin->data = data;
+        newBegin->next = * head;
+        * head = newBegin;
+        return;
+    }
     struct Node * newInsert = (struct Node *)malloc(sizeof(struct Node));
     newInsert->data = data;
     newInsert->next = NULL;
@@ -88,7 +97,7 @@ void deleteAtEnd(struct Node** head)
         previous = current;
         current = current->next;  
     }
-    
+
     if(previous != NULL)
     {
         previous->next = NULL;
@@ -162,14 +171,14 @@ void deleteNode(struct Node** head, int key)
 
 void sortList(struct Node** head)
 {
-    if(* head == NULL && (* head)->next == NULL)
+    if(* head == NULL || (* head)->next == NULL)
     {
         return;
     }
 
     struct Node * i = * head;
     struct Node * j = NULL;
-    
+
     while(i != NULL)
     {
         j = i->next;
@@ -185,7 +194,6 @@ void sortList(struct Node** head)
         }
         i = i->next;
     }
-
 }
 
 void reverseList(struct Node** head)

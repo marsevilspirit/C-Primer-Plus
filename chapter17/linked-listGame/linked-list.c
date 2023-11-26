@@ -7,7 +7,7 @@ int main(void)
 {
     struct Node * head = NULL;
     struct Node * previous, *current;
-    int n;
+    int n = 0;
     printf("%s\n\t\t创建一个链表\n%s\n",STARS,STARS);
 
     for(int i = 1; n != -1; i++)

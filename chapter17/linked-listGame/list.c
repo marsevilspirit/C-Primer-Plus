@@ -219,7 +219,7 @@ void free_linked_list(struct Node * head,struct Node* current)
         return;
     }
 
-    while (current->next != NULL)
+    while (current != NULL)
     {
         struct Node * temp = current->next;
         free(current);

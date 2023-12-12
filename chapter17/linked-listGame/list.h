@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 // 单链表节点定义
 struct Node {
     int data;
